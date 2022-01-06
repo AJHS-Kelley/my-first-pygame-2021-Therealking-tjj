@@ -11,3 +11,11 @@ WINDOWWIDTH = 400
 WINDOWHEIGHT = 400
 WINDOWSURFACE = pygame.display.set_mode((WINDOWWIDTH,WINDOWHEIGHT),0,32)
 pygame.display.set_caption('Animation example!')
+
+# setup the direction variables
+DOWNLEFT = 'downleft'
+DOWNRIGHT = 'downright'
+UPLEFT = 'upleft'
+UPRIGHT = 'upright'
+
+MOVESPEED = 4
