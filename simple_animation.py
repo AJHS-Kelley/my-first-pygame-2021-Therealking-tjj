@@ -32,3 +32,11 @@ b1 = {'rect':pygame.Rect (300, 80, 50, 100), 'color':RED, 'dir':UPRIGHT}
 b2 = {'rect':pygame.Rect (200, 200, 20, 20), 'color':GREEN, 'dir':UPLEFT}
 B3 ={'rect':pygame.Rect (100, 150, 60, 60), 'color':RED, 'dir':DOWNLEFT}
 BOXES = [B1, B2, B3]
+
+# Run the game loop.
+while True:
+    # Chech for Quit event.
+    for event in pygmae.event.get():
+        if event.type == Quit
+        pygame.quit()
+        sys.exit()
