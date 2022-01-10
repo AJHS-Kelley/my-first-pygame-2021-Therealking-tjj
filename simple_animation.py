@@ -40,3 +40,20 @@ while True:
         if event.type == Quit
         pygame.quit()
         sys.exit()
+
+        windowsurface.fill(WHITE)
+
+        for b in boxes:
+            # moves the data structure.
+            if b['dir'] == DOWNLEFT:
+                b['rect'].left. -= MOVESPEED
+                b['rect'].top += MOVESPEED
+            if b['dir'] == DOWNRIGHT:
+                b['rect'].left. += MOVESPEED
+                b['rect'].top += MOVESPEED
+            if b['dir'] == UPLEFT:
+                b['rect'].left. -= MOVESPEED
+                b['rect'].top -= MOVESPEED
+            if b['dir'] == UPRIGHT:
+                b['rect'].left. += MOVESPEED
+                b['rect'].top -= MOVESPEED
