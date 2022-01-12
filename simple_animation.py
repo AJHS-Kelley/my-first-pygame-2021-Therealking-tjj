@@ -9,7 +9,8 @@ pygame.init()
 # setup the window
 WINDOWWIDTH = 400
 WINDOWHEIGHT = 400
-WINDOWSURFACE = pygame.display.set_mode((WINDOWWIDTH,WINDOWHEIGHT),0,32)
+WINDOWSURFACE = pygame.display.set_mode((WINDOWWIDTH,WINDOWHEIGHT),0,32) 
+# change WINDOWSURFACE to windowSurface on the line above.  
 pygame.display.set_caption('Animation example!')
 
 
@@ -22,7 +23,7 @@ UPRIGHT = 'upright'
 MOVESPEED = 4
 
 # setup color values
-WHITE =(255, 255, 255)
+WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GREEN =(0,255,0)
 BLUE = (0, 0, 255)
@@ -42,6 +43,7 @@ while True:
             sys.exit()
 
     WINDOWSURFACE.fill(WHITE)
+    # change WINDOWSURFACE to windowSurface on the line above.  
 
     for b in boxes:
         # moves the data structure.
@@ -83,8 +85,10 @@ while True:
                     if b['dir'] == UPRIGHT:
                         b['dir'] = UPLEFT
             #Draw the box onto the game surface.
-            pygame.draw.rect (WINDOWSURFACE, b['color'], b['rect'])   
+            pygame.draw.rect (WINDOWSURFACE, b['color'], b['rect']) # Move this to the left 4 spaces.   
+            # change WINDOWSURFACE to windowSurface on the line above.  
+
 
             # Draw the window to the screen.
-            pygame.display.update()    
-            time.sleep(0.02)             
+            pygame.display.update()    # This line should 4 spaces from the LEFT MARGIN.
+            time.sleep(0.02)           # This line should 4 spaces from the LEFT MARGIN.  
