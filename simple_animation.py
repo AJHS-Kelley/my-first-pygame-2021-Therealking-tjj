@@ -1,6 +1,6 @@
-# siimple Animation with pygame, ryan kelley, 1/6/22, 1:31pm, v0.0
-
-import pygame,sys, time
+# siimple Animation with pygame,Terrance Holland, 1/18/22, 1:31pm, v0.8
+      
+import sys, pygame, time      
 from pygame.locals import *
 
 # setup pygame
@@ -31,7 +31,7 @@ BLUE = (0, 0, 255)
 # setup the box data
 b1 = {'rect':pygame.Rect (300, 80, 50, 100), 'color':RED, 'dir':UPRIGHT}
 b2 = {'rect':pygame.Rect (200, 200, 20, 20), 'color':GREEN, 'dir':UPLEFT}
-b3 ={'rect':pygame.Rect (100, 150, 60, 60), 'color':RED, 'dir':DOWNLEFT}
+b3 ={'rect':pygame.Rect (100, 150, 60, 60), 'color':BLUE, 'dir':DOWNLEFT}
 boxes = [b1, b2, b3]
 
 # Run the game loop.
@@ -66,29 +66,34 @@ while True:
                 b['dir']= DOWNLEFT
             if b['dir'] == UPRIGHT:
                 b ['dir'] = DOWNRIGHT
-            if b['rect'].bottom > WINDOWHEIGHT: # Move this line 4 spaces to the LEFT. 
+        if b['rect'].bottom > WINDOWHEIGHT: # Move this line 4 spaces to the LEFT. 
                 # The box has moved passed the bottom 
-                if b['dir'] == DOWNLEFT: # Move this line 4 spaces to the LEFT. 
-                    b['dir']= UPLEFT # Move this line 4 spaces to the LEFT. 
-                if b['dir'] == DOWNRIGHT: # Move this line 4 spaces to the LEFT. 
-                    b ['dir'] = UPRIGHT # Move this line 4 spaces to the LEFT. 
-            if b['rect'].left < 0: # Move this line 4 spaces to the LEFT. 
+            if b['dir'] == DOWNLEFT: # Move this line 4 spaces to the LEFT. 
+                b['dir']= UPLEFT # Move this line 4 spaces to the LEFT. 
+            if b['dir'] == DOWNRIGHT: # Move this line 4 spaces to the LEFT. 
+                b ['dir'] = UPRIGHT # Move this line 4 spaces to the LEFT. 
+        if b['rect'].left < 0: # Move this line 4 spaces to the LEFT. 
                     #the box has moved passed the right 
-                if b['dir'] == DOWNLEFT: # Move this line 4 spaces to the LEFT. 
-                    b['dir']= DOWNRIGHT # Move this line 4 spaces to the LEFT. 
-                if b['dir'] == UPLEFT: # Move this line 4 spaces to the LEFT. 
-                    b['dir'] = UPRIGHT # Move this line 4 spaces to the LEFT. 
-            if b['rect'].right > WINDOWWIDTH: # Move this line 4 spaces to the LEFT. 
+            if b['dir'] == DOWNLEFT: # Move this line 4 spaces to the LEFT. 
+                b['dir']= DOWNRIGHT # Move this line 4 spaces to the LEFT. 
+            if b['dir'] == UPLEFT: # Move this line 4 spaces to the LEFT. 
+                b['dir'] = UPRIGHT # Move this line 4 spaces to the LEFT. 
+        if b['rect'].right > WINDOWWIDTH: # Move this line 4 spaces to the LEFT. 
                     # The box has moved past the right 
-                    if b['dir'] == DOWNRIGHT: # Move this line 4 spaces to the LEFT. 
-                        b['dir']= DOWNLEFT # Move this line 4 spaces to the LEFT. 
-                    if b['dir'] == UPRIGHT: # Move this line 4 spaces to the LEFT. 
-                        b['dir'] = UPLEFT # Move this line 4 spaces to the LEFT. 
+            if b['dir'] == DOWNRIGHT: # Move this line 4 spaces to the LEFT. 
+                 b['dir']= DOWNLEFT # Move this line 4 spaces to the LEFT. 
+            if b['dir'] == UPRIGHT: # Move this line 4 spaces to the LEFT. 
+                b['dir'] = UPLEFT # Move this line 4 spaces to the LEFT. 
             #Draw the box onto the game surface.
-            pygame.draw.rect (windowSurface, b['color'], b['rect']) # Move this to the left 4 spaces.   
+        pygame.draw.rect (windowSurface, b['color'], b['rect']) # Move this to the left 4 spaces.   
             # change WINDOWSURFACE to windowSurface on the line above.  
 
 
+
+
+
+
+
             # Draw the window to the screen.
-            pygame.display.update()   # Move this line 4 spaces to the LEFT.  
-            time.sleep(0.02)          # Move this line 4 spaces to the LEFT. 
+    pygame.display.update()   #move this line 4 spaces to the left  
+    time.sleep(0.02)           
