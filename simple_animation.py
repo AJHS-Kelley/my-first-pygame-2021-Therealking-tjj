@@ -66,29 +66,29 @@ while True:
                 b['dir']= DOWNLEFT
             if b['dir'] == UPRIGHT:
                 b ['dir'] = DOWNRIGHT
-            if b['rect'].bottom > WINDOWHEIGHT:
+            if b['rect'].bottom > WINDOWHEIGHT: # Move this line 4 spaces to the LEFT. 
                 # The box has moved passed the bottom 
-                if b['dir'] == DOWNLEFT:
-                    b['dir']= UPLEFT
-                if b['dir'] == DOWNRIGHT: 
-                    b ['dir'] = UPRIGHT
-            if b['rect'].left < 0:
+                if b['dir'] == DOWNLEFT: # Move this line 4 spaces to the LEFT. 
+                    b['dir']= UPLEFT # Move this line 4 spaces to the LEFT. 
+                if b['dir'] == DOWNRIGHT: # Move this line 4 spaces to the LEFT. 
+                    b ['dir'] = UPRIGHT # Move this line 4 spaces to the LEFT. 
+            if b['rect'].left < 0: # Move this line 4 spaces to the LEFT. 
                     #the box has moved passed the right 
-                if b['dir'] == DOWNLEFT:
-                    b['dir']= DOWNRIGHT
-                if b['dir'] == UPLEFT:
-                    b['dir'] = UPRIGHT
-            if b['rect'].right > WINDOWWIDTH:
+                if b['dir'] == DOWNLEFT: # Move this line 4 spaces to the LEFT. 
+                    b['dir']= DOWNRIGHT # Move this line 4 spaces to the LEFT. 
+                if b['dir'] == UPLEFT: # Move this line 4 spaces to the LEFT. 
+                    b['dir'] = UPRIGHT # Move this line 4 spaces to the LEFT. 
+            if b['rect'].right > WINDOWWIDTH: # Move this line 4 spaces to the LEFT. 
                     # The box has moved past the right 
-                    if b['dir'] == DOWNRIGHT:
-                        b['dir']= DOWNLEFT
-                    if b['dir'] == UPRIGHT:
-                        b['dir'] = UPLEFT
+                    if b['dir'] == DOWNRIGHT: # Move this line 4 spaces to the LEFT. 
+                        b['dir']= DOWNLEFT # Move this line 4 spaces to the LEFT. 
+                    if b['dir'] == UPRIGHT: # Move this line 4 spaces to the LEFT. 
+                        b['dir'] = UPLEFT # Move this line 4 spaces to the LEFT. 
             #Draw the box onto the game surface.
             pygame.draw.rect (windowSurface, b['color'], b['rect']) # Move this to the left 4 spaces.   
             # change WINDOWSURFACE to windowSurface on the line above.  
 
 
             # Draw the window to the screen.
-            pygame.display.update()    
-            time.sleep(0.02)          
+            pygame.display.update()   # Move this line 4 spaces to the LEFT.  
+            time.sleep(0.02)          # Move this line 4 spaces to the LEFT. 
