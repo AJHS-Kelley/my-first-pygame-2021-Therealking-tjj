@@ -7,7 +7,7 @@ from pygame.locals import*
 pygame.init()
 
 #set up the game window.
-windowsurface = pygame.display. set_mode ((500, 400),0,32)
+windowSurface = pygame.display. set_mode ((500, 400),0,32)
 pygame.display.set_captain('hello, world!')
 
 #setup color values
